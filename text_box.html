@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style type="text/css">
+	#c1{
+		color:orange;
+	}
+	#te1
+	{
+		width: 500px;
+		height: 40px;
+		border-color: red yellow orange blue ;
+		text-orientation: right;
+		font-size: 30px;
+		color: red;
+		text-align: center;
+	}
+	#a1:hover
+	{
+		font-size: 40px;
+		color:red;
+	}
+	#a1
+	{
+		font-size: 20px;
+		
+	}
+	body
+	{
+		background-position:100% 80%;
+	}
+	#m1{
+		background-color: white;
+		margin-top: -20px;
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	#n1
+	{
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: 10px;
+		background-color: #f3f0dd;
+
+	}
+</style>
+<center>
+	<body id="n1">
+	<div id="m1">
+	<h1 id="c1"><i>For Species Enter<mark> human</mark> for human beings or Enter <mark>other</mark> </i><h1>
+		<h2 id="c1"><i>For Date of birth Enter <mark>30 BBY to 5 ABY</mark> or Enter <mark>Not between 30 BBY to 5 ABY</mark></i>
+			<h2>
+			<h2 id="c1"><i> For Epsidoe Enter <mark> episode 1..so on</mark></i><h2>
+				</div>	
+		
+				
+<div ng-app="myApp" ng-controller="customersCtrl">	
+<form action="/action_page.php">
+  <input type="text" ng-model="vehicle1" id="te1"  placeholder="Filter" autocomplete="off"> <br>
+</form>
+
+  <p ng-repeat="x in names | filter:vehicle1">
+    <a ng-href="{{x.name}}.html"  id="a1" target="_blank">{{  x.name }}</a>
+  </p>
+</div>
+
+
+<script>
+	"use strict";
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope) {
+      $scope.Name = "ntbrgtvfdca";
+  $scope.names =  [
+        {name:'Princess Leia',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 1,episode 2'},
+        {name:'Kylo Ren',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 3,episode 4,episode 5'},
+       {name:'Obi-Wan Kenobi',ranges:'Not between 30 BBY to 5 ABY',mode:'human',show:'episode 1, episode 3'},
+        {name:'Luke Skywalker',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 3, episode 5'},
+        {name:'Han Solo',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 3, episode 5'},
+        {name:'Padme Amidala',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 1,episode 2, episode 3 '},
+        {name:'Rey',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 3,episode 5 '},
+
+        {name:'Count Dooku',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 2,episode 3'},
+      {name:'Lando Calrissian',ranges:'Not between 30 BBY to 5 ABY',mode:'human',show:'episode3, episode 4'},
+       {name:'Qui-Gon Jinn',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 1,episode 2, episode 3'},
+        {name:'Mace Windu',ranges:'Not between 30 BBY to 5 ABY',mode:'human',show:'episode 1,episode 2, episode 3'},
+        {name:'Jango Fett',ranges:'Not between 30 BBY to 5 ABY',mode:'human',show:'episode 2,episode 3,episode 4'},
+        {name:'Jyn Erso',ranges:'30 BBY to 5 ABY',mode:'human',show:'episode 3, episode 4'},
+
+        {name:'Jar Jar Binks',ranges:'30 BBY to 5 ABY',mode:'other',show:'episode 1,episode 2, episode 3'},
+       {name:'Admiral Ackbar',ranges:'Not between 30 BBY to 5 ABY',mode:'other',show:'episode 4,episode 5'},
+       {name:'Kit Fisto',ranges:'30 BBY to 5 ABY',mode:'other',show:'episode 3,episode 4'}
+        ];
+    
+});
+</script>
+</body></center>
+</html>
